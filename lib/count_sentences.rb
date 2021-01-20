@@ -16,10 +16,15 @@ class String
 
   end
 
-  new 
-
   def count_sentences
-    self.split
-
-  end
+    new = []
+    count = 0
+    
+    new << self.split
+    new.each do |letter|
+      if letter.end_with("?") || letter.end_with("!") || letter.end_with(".")
+        count += 1
+      end
+    end
+    count
 end
