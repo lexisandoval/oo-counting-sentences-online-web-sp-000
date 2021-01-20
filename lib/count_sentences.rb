@@ -20,8 +20,8 @@ class String
     new = []
     count = 0
 
-    new << self.split
-    new.each do |letter|
+    self.split!
+    self.each do |letter|
       if letter.end_with?("?") || letter.end_with?("!") || letter.end_with?(".")
         count += 1
       end
