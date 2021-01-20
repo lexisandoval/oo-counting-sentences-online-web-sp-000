@@ -19,7 +19,7 @@ class String
   def count_sentences
     new = []
     count = 0
-    
+
     new << self.split
     new.each do |letter|
       if letter.end_with("?") || letter.end_with("!") || letter.end_with(".")
