@@ -17,15 +17,6 @@ class String
   end
 
   def count_sentences
-    new = []
-    count = 0
-
-    self.split
-    self.each do |letter|
-      if letter.end_with?("?") || letter.end_with?("!") || letter.end_with?(".")
-        count += 1
-      end
-    end
-    count
+    self.split(/[.?!]+/).count
   end
 end
