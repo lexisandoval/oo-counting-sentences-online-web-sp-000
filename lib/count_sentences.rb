@@ -27,4 +27,5 @@ class String
       end
     end
     count
+  end
 end
